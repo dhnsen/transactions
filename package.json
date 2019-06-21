@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/dhnsen/transactions#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "4.3.1",
     "chalk": "2.4.2",
-    "debug": "^4.1.1",
+    "debug": "4.1.1",
     "express": "4.17.1",
-    "morgan": "^1.9.1"
+    "morgan": "1.9.1"
   }
 }
