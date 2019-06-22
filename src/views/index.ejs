@@ -20,29 +20,29 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-3" style="background-color: #5f78b5">
+
+            <div class="col" style="background-color: #e6e8ed">
                 <br>
-                left bar<br>
-                <br>
-                <br>
+                <h5>Transaction Record</h5>
                 <br>
                 
-            </div>
-            <div class="col-9" style="background-color: #e6e8ed">
+                <% for (var i = 0; i < bankTransactions.length; i++) { %>
                 <br>
-                content area<br>
-                <br>
-                <br>
-                <br>
-                <% for (var i = 0; i < 125; i++) { %>
-                    <br>content<br>
-                  <% } %>
+                <div class="d-flex justify-content-center" style="width: 90%; background-color:cadetblue">
+                    <div class="justify-items-start" style="width: 20%"><%= bankTransactions[i].date %></div>
+                    <div class="justify-items-start" style="width: 20%"><%= bankTransactions[i].name %></div>
+                    <div class="justify-items-start" style="width: 20%"><%= bankTransactions[i].location.city %></div>
+                    <div class="justify-items-start" style="width: 20%"><%= bankTransactions[i].location.region %></div>
+                    <div class="justify-items-start" style="width: 20%"><%= bankTransactions[i].amount %></div>
+                </div>
+                <% } %>
+                <br><br>
             </div>
             
         </div>
     </div>
 
-    
+
 
     <!-- script references -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
