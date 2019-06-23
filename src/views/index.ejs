@@ -8,6 +8,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <title>Document</title>
+    
 </head>
 
 <body style="padding-top: 75px;">
@@ -18,34 +19,30 @@
     <!-- NavBar End-->
 
     <!-- Page Content -->
-    
 
-            <div class="container d-flex flex-column" style="background-color: #e6e8ed">
-                <br>
-                <h5>Transaction Record</h5>
-                <br>
-                
-                <% for (var i = 0; i < bankTransactions.length; i++) { %>
-                
-                <div class="align-self-center row"
-                <% if (bankTransactions[i].category.includes("Restaurants")) { %>
-                    style="width: 96%; background-color: pink;"
-                <% } else if (i % 2) { %>
-                style="width: 96%; background-color:#d6d6d6;"
-                <% } else { %>
-                    style="width: 96%; background-color: white;"
-                    <% } %>
-                >
-                    <span class="col"><%= bankTransactions[i].date %></span>
-                    <span class="col"><%= bankTransactions[i].name %></span>
-                    <span class="col"><%= bankTransactions[i].location.city %>, <%= bankTransactions[i].location.region %></span>
-                    <span class="col"><%= bankTransactions[i].category %></span>
-                    <span class="col"><%= bankTransactions[i].amount %></span>
-                </div>
-                <% } %>
-                <br><br>
-            </div>
-    
+
+    <div class="container d-flex flex-column" style="background-color: #e6e8ed">
+        <br>
+        <h5>Transaction Record</h5>
+        <br>
+
+        <% for (var i = 0; i < bankTransactions.length; i++) { %>
+
+        <div class="align-self-center row" <% if (bankTransactions[i].category.includes("Restaurants")) { %>
+            style="width: 96%; background-color: pink;" <% } else if (i % 2) { %>
+            style="width: 96%; background-color:#d6d6d6;" <% } else { %> style="width: 96%; background-color: white;"
+            <% } %>>
+            <span class="col"><%= bankTransactions[i].date %></span>
+            <span class="col"><%= bankTransactions[i].name %></span>
+            <span class="col"><%= bankTransactions[i].location.city %>,
+                <%= bankTransactions[i].location.region %></span>
+            <span class="col"><%= bankTransactions[i].category %></span>
+            <span class="col" style="text-align: right"><%= bankTransactions[i].amount.toFixed(2) %></span>
+        </div>
+        <% } %>
+        <br><br>
+    </div>
+
 
 
 
